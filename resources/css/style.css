@@ -1,0 +1,212 @@
+/* UNIVERSAL STYLING */
+html {
+  font-size: 18px;
+}
+
+body {
+  background: #4d4d4d;
+  font-family: 'Bitter', serif;
+  background: url(../imgs/law-bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main, footer {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  color: white;
+  background-color: #4d4d4d;
+}
+
+.sectionContainer h1 {
+  margin: .25rem auto;
+  font-size: 2rem;
+  color: #c49e57;
+}
+
+.subContent {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5rem;
+}
+
+.subContent p {
+  margin: auto .25rem;
+  font-family: "Georgia", serif;
+}
+
+
+/* BANNER STYLING */
+header {
+  width: 100%;
+  position:fixed;
+  z-index: 10;
+  border-bottom: 1px solid;
+  opacity: 0.9;
+}
+
+#sjs {
+  margin: auto 1rem;
+  font-size: 3rem;
+  color: #d6ab5a;
+  border: 3px double #d6ab5a;
+  line-height: 2.6rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  background: #4d4d4d;
+  height: 62px;
+  box-shadow: 0 0 10px rgba(0,0,0,.25); /* Creates a drop shadow under the nav bar. */
+}
+
+header nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex; /* Display flex corrects the menu from stacking instead of sitting in a row. */
+}
+
+header nav ul li a {
+  float: left;
+  line-height: 62px;
+  padding: 0 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #d6ab5a;
+  opacity: .55;
+  transition: opacity .25s;
+}
+
+header nav ul li a:hover {
+  opacity: 1;
+}
+
+
+/* LANDING SECTION STYLING */
+#landingBanner {
+  display: flex;
+  height: 30rem;
+}
+
+#headline {
+  margin: auto 0;
+  padding: 4rem;
+  max-width: 22rem;
+  color: white;
+  font-family: 'Asap Condensed', sans-serif;
+  font-size: 3rem;
+}
+
+
+/* AWARDS STYLING */
+#accolades {
+  margin: .5rem;
+  font-family: "Georgia", serif;
+}
+
+.awards {
+  display: flex;
+  align-items: center;
+  margin: .25em;
+}
+
+.awards a img{
+  max-width: 100%;
+}
+
+
+/* CHAT WITH US STYLING */
+#contactColumns {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contactList {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 40%;
+}
+
+#map {
+  width: 18rem;
+  height: 18rem;
+  background-color: grey;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: gray;
+  height: 30%;
+}
+
+.contact h2, .contact p, .subContent h2 {
+  margin: auto;
+  font-family: 'Asap Condensed', sans-serif;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  font-family: 'Bitter', serif;
+  color: #c49e57; 
+}
+
+#HoO {
+  color: #c49e57;
+  font-family: 'Bitter', serif;
+  margin: 0;
+}
+
+
+/* FOOTER STYLING */
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+#footer h2 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #ffa700;
+}
+
+#footer p {
+  margin: .5rem;
+  line-height: 1.25rem;
+}
+
+#copyright {
+  align-self: flex-start;
+  color: #a56c00;
+}
+
+
+/* MEDIA QUERY STYLING */
+@media only screen and (min-width: 685px) {
+  
+  /* Hides mobile icons in tablet/desktop mode */
+  .mobileNav {
+    display: none;
+  }  
+}
+
+@media only screen and (max-width: 770px) {
+  
+  /* TABLET STYLING */
+}
