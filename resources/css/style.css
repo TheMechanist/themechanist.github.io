@@ -6,7 +6,7 @@ html {
 body {
   background: #4d4d4d;
   font-family: 'Bitter', serif;
-  background: url(../imgs/law-bg.jpg) no-repeat center;
+  background: url(../imgs/backgroundImage.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
