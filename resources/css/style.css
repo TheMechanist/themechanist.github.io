@@ -6,7 +6,7 @@ html {
 body {
   background: #4d4d4d;
   font-family: 'Bitter', serif;
-  background: url(../imgs/backgroundImage.jpg) no-repeat center;
+  background: url(../imgs/law-bg.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -67,25 +67,76 @@ header nav {
   box-shadow: 0 0 10px rgba(0,0,0,.25); /* Creates a drop shadow under the nav bar. */
 }
 
-header nav ul {
+#topNav {
   padding: 0;
   list-style: none;
   display: flex; /* Display flex corrects the menu from stacking instead of sitting in a row. */
 }
 
-header nav ul li a {
+#topNav li a {
   float: left;
   line-height: 62px;
   padding: 0 1rem;
   font-weight: bold;
+  white-space: nowrap;
   text-decoration: none;
   color: #d6ab5a;
   opacity: .55;
   transition: opacity .25s;
 }
 
-header nav ul li a:hover {
+#topNav li a:hover {
   opacity: 1;
+}
+
+/* MOBILE NAV */
+.dropbtn {
+  color: #d6ab5a;
+  background-color: gray;
+  font-family: 'Bitter', serif;
+  padding: 16px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #d6ab5a;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
 
 
@@ -150,15 +201,27 @@ header nav ul li a:hover {
   height: 30%;
 }
 
-.contact h2, .contact p, .subContent h2 {
+.contact h2, .contact p, .subContent h2, .faq h2, .faq p {
   margin: auto;
   font-family: 'Asap Condensed', sans-serif;
 }
 
-.contact h2 {
+.contact h2, .faq h2 {
   font-size: 1.5rem;
   font-family: 'Bitter', serif;
   color: #c49e57; 
+}
+
+#socialMedia {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#socialMedia a {
+  background-color: gray;
+  padding: 20%;
 }
 
 #HoO {
@@ -197,6 +260,33 @@ header nav ul li a:hover {
 }
 
 
+/* FAQ PAGE STYLING */
+#faqPage {
+  display: flex;
+  padding-top: 5rem;
+}
+
+.faqColumn {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: .5rem;
+  color: white;
+  background-color: gray;
+}
+
+.faq h2, .faq p {
+  margin: .5rem;
+}
+
+
 /* MEDIA QUERY STYLING */
 @media only screen and (min-width: 685px) {
   
@@ -209,4 +299,24 @@ header nav ul li a:hover {
 @media only screen and (max-width: 770px) {
   
   /* TABLET STYLING */
+  #topNav {
+    display: none;
+  }
+  
+  .mobileNav {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  
+  /* MOBILE STYLING */
+  .subContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .subContent p {
+    margin: .5rem 0;
+  }
 }
