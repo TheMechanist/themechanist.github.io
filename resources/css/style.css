@@ -17,7 +17,12 @@ main, footer {
 }
 
 .sectionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin: 2rem auto;
   color: white;
@@ -31,7 +36,10 @@ main, footer {
 }
 
 .subContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   margin: 0.5rem;
 }
@@ -60,16 +68,23 @@ header {
 }
 
 header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   background: #4d4d4d;
   height: 62px;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.25);
   box-shadow: 0 0 10px rgba(0,0,0,.25); /* Creates a drop shadow under the nav bar. */
 }
 
 #topNav {
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; /* Display flex corrects the menu from stacking instead of sitting in a row. */
 }
 
@@ -82,6 +97,7 @@ header nav {
   text-decoration: none;
   color: #d6ab5a;
   opacity: .55;
+  -webkit-transition: opacity .25s;
   transition: opacity .25s;
 }
 
@@ -113,6 +129,7 @@ header nav {
   top: 60px;
   background-color: gray;
   min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -143,6 +160,8 @@ header nav {
 
 /* LANDING SECTION STYLING */
 #landingBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 30rem;
 }
@@ -164,7 +183,11 @@ header nav {
 }
 
 .awards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: .25em;
 }
@@ -176,13 +199,24 @@ header nav {
 
 /* CHAT WITH US STYLING */
 #contactColumns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 #contactList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 30%;
 }
@@ -194,9 +228,17 @@ header nav {
 }
 
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   background-color: gray;
   height: 30%;
@@ -214,9 +256,17 @@ header nav {
 }
 
 #socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   background-color: gray;
   padding: 1.5rem;
@@ -231,9 +281,18 @@ header nav {
 
 /* FOOTER STYLING */
 #footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #000000;
   color: white;
@@ -253,6 +312,7 @@ header nav {
 }
 
 #copyright {
+  -ms-flex-item-align: start;
   align-self: flex-start;
   color: #a56c00;
 }
@@ -260,20 +320,35 @@ header nav {
 
 /* FAQ PAGE STYLING */
 #faqPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 5rem;
 }
 
 .faqColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 50%;
 }
 
 .faq {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   margin: .5rem;
   color: white;
@@ -302,6 +377,8 @@ header nav {
   }
   
   .mobileNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   
@@ -313,6 +390,7 @@ header nav {
 @media only screen and (max-width: 690px) {
   /* CWU STYLING */
    .subContent {
+     -ms-flex-wrap: wrap;
      flex-wrap: wrap;
   }
   
@@ -321,6 +399,9 @@ header nav {
   }
   
   #socialMedia {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     margin: .5rem;
   }
@@ -331,7 +412,12 @@ header nav {
   }
   
   #faqPage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   
@@ -362,7 +448,12 @@ header nav {
   }
   
   .subContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   
