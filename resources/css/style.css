@@ -1,472 +1,160 @@
 /* UNIVERSAL STYLING */
 html {
   font-size: 18px;
-}
-
-body {
-  background: #4d4d4d;
-  font-family: 'Bitter', serif;
-  background: url(../imgs/law-bg.jpg) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-main, footer {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.sectionContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin: 2rem auto;
-  color: white;
-  background-color: #4d4d4d;
-}
-
-.sectionContainer h1 {
-  margin: .25rem auto;
-  font-size: 2rem;
-  color: #c49e57;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .subContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  margin: 0.5rem;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 60% 20% 20%;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.subContent p {
-  margin: auto .25rem;
-  font-family: "Georgia", serif;
+.subContentAlt {
+  display: grid;
+  background-color: gray;
+  justify-items: center;
 }
 
-
-/* BANNER STYLING */
+/* NAVIGATION STYLING */
 header {
-  width: 100%;
   position:fixed;
   z-index: 10;
-  border-bottom: 1px solid;
-  opacity: 0.9;
+  width: 100%;
+  background-color: black;
+  opacity: .8;
 }
 
-#sjs {
-  margin: auto 1rem;
-  font-size: 3rem;
-  color: #d6ab5a;
-  border: 3px double #d6ab5a;
-  line-height: 2.6rem;
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-rows: 100%;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.85);
+  box-shadow: 0 0 10px rgba(0,0,0,.85); /* Creates a drop shadow under the nav bar. */
 }
 
-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  background: #4d4d4d;
-  height: 62px;
-  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.25);
-  box-shadow: 0 0 10px rgba(0,0,0,.25); /* Creates a drop shadow under the nav bar. */
-}
-
-#topNav {
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; /* Display flex corrects the menu from stacking instead of sitting in a row. */
-}
-
-#topNav li a {
-  float: left;
-  line-height: 62px;
-  padding: 0 1rem;
-  font-weight: bold;
+.nav a {
+  font-family: 'Century Gothic', sans-serif;
   white-space: nowrap;
   text-decoration: none;
-  color: #d6ab5a;
+  color: white;
   opacity: .55;
   -webkit-transition: opacity .25s;
   transition: opacity .25s;
 }
 
-#topNav li a:hover {
+.nav a:hover {
   opacity: 1;
 }
 
-/* MOBILE NAV */
-.dropbtn {
-  color: #d6ab5a;
-  background-color: gray;
-  font-family: 'Bitter', serif;
-  padding: 16px;
-  font-size: 1.5rem;
-  border: none;
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 60px;
-  background-color: gray;
-  min-width: 160px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: #d6ab5a;
-  padding: 20px 10px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: white;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: darkgray;
-}
-
-
-/* LANDING SECTION STYLING */
-#landingBanner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 30rem;
-}
-
-#headline {
-  margin: auto 0;
-  padding: 4rem;
-  max-width: 22rem;
+#logo {
   color: white;
-  font-family: 'Asap Condensed', sans-serif;
-  font-size: 3rem;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+}
+
+.left, .right {
+  padding: 10px;
 }
 
 
-/* AWARDS STYLING */
-#accolades {
-  margin: .5rem;
-  font-family: "Georgia", serif;
+/* SPLASH PAGE STYLING */
+.ctaMain, .ctaSlogan {
+  color: white;
+  opacity: .5;
 }
 
-.awards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.ctaMain {
+  font-size: 5rem;
+  letter-spacing: -.3rem;
+  font-weight: bold;
+}
+
+.ctaSlogan {
+  font-size: 2rem;
+  letter-spacing: .75rem;
+}
+
+.splash {
+  display: grid;
+  height: 50rem;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background: url(../imgs/kidReadingBW.jpg) no-repeat center;
+  background-size: cover;
+}
+
+
+/* MAIN STYLING */
+#wordCloud {
+  grid-column-start: 2;
+}
+
+.subContent p img {
+  width: 30rem;
+  margin: 2rem;
+}
+
+#programFeatures {
+  font-size: 4rem;
+  margin: 3rem 0 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+#programFeaturesDescription {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  color: lightgray;
+}
+
+.servicesGallery {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.image {
+  display: grid;
+  margin: 1rem 0;
+}
+
+.image h2 {
+  color: white;
+  height: 10rem;
+  width: 15rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: .25em;
+  justify-items: center;
 }
 
-.awards a img{
-  max-width: 100%;
+#service1 {
+  background: url(../imgs/studyKids.jpg) no-repeat center;
 }
 
-
-/* CHAT WITH US STYLING */
-#contactColumns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+#service2 {
+  background: url(../imgs/courtKids.jpg) no-repeat center;
 }
 
-#contactList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 30%;
-}
-
-#map {
-  width: 18rem;
-  height: 18rem;
-  background-color: grey;
-}
-
-.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  background-color: gray;
-  height: 30%;
-}
-
-.contact h2, .contact p, .subContent h2, .faq h2, .faq p {
-  margin: auto;
-  font-family: 'Asap Condensed', sans-serif;
-}
-
-.contact h2, .faq h2 {
-  font-size: 1.5rem;
-  font-family: 'Bitter', serif;
-  color: #f5c364; 
-}
-
-#socialMedia {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  background-color: gray;
-  padding: 1.5rem;
-}
-
-#HoO {
-  color: #c49e57;
-  font-family: 'Bitter', serif;
-  margin: 0;
+#service3 {
+  background: url(../imgs/mentorKid.jpg) no-repeat center;
 }
 
 
 /* FOOTER STYLING */
 #footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #000000;
+  background-color: black;
   color: white;
-  opacity: 0.5;
-  font-size: 0.75rem;
-}
-
-#footer h2 {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #ffa700;
-}
-
-#footer p {
-  margin: .5rem;
-  line-height: 1.25rem;
-}
-
-#copyright {
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  color: #a56c00;
-}
-
-
-/* FAQ PAGE STYLING */
-#faqPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 5rem;
-}
-
-.faqColumn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 50%;
-}
-
-.faq {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  margin: .5rem;
-  color: white;
-  background-color: gray;
-}
-
-.faq h2, .faq p {
-  margin: .5rem;
-}
-
-
-/* MEDIA QUERY STYLING */
-@media only screen and (min-width: 685px) {
-  
-  /* Hides mobile icons in tablet/desktop mode */
-  .mobileNav {
-    display: none;
-  }  
-}
-
-@media only screen and (max-width: 770px) {
-  
-  /* TABLET STYLING */
-  #topNav {
-    display: none;
-  }
-  
-  .mobileNav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  header {
-    opacity: 1;
-  }
-}
-
-@media only screen and (max-width: 690px) {
-  /* CWU STYLING */
-   .subContent {
-     -ms-flex-wrap: wrap;
-     flex-wrap: wrap;
-  }
-  
-  #contactList {
-    margin: 0 .25rem;
-  }
-  
-  #socialMedia {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin: .5rem;
-  }
-  
-  #socialMedia a {
-    margin: .5rem;
-    padding: 1rem;
-  }
-  
-  #faqPage {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  
-  .faqColumn {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 525px) {
-  
-  /* MOBILE STYLING */
-  body {
-    background: url(../imgs/lawBGmini.jpg) no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  
-  .sectionContainer h1 {
-    text-align: center;
-  }
-  
-  #sjs {
-    margin: auto .5rem;
-  }
-  
-  #landingBanner {
-    text-align: center;
-  }
-  
-  .subContent {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  
-  .subContent p {
-    margin: .5rem 0;
-  }
-  
-  #contactList {
-    width: 100%;
-    margin: .5rem 0;
-  }
-  
-  .contact {
-    margin: .25rem 0;
-  }
+  padding: 2rem;
 }
