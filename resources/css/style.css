@@ -41,7 +41,8 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,.85); /* Creates a drop shadow under the nav bar. */
 }
 
-.nav a {
+.navItem {
+  padding: 10px;
   font-family: 'Century Gothic', sans-serif;
   white-space: nowrap;
   text-decoration: none;
@@ -51,7 +52,7 @@ header {
   transition: opacity .25s;
 }
 
-.nav a:hover {
+.navItem:hover {
   opacity: 1;
 }
 
@@ -62,12 +63,8 @@ header {
   letter-spacing: .1rem;
 }
 
-.left, .right {
-  padding: 10px;
-}
 
-
-/* SPLASH PAGE STYLING */
+/* LAMDING PAGE STYLING */
 .ctaMain, .ctaSlogan {
   color: white;
   opacity: .5;
@@ -124,31 +121,43 @@ header {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.image {
+.services {
   display: grid;
-  margin: 1rem 0;
-}
-
-.image h2 {
-  color: white;
-  height: 10rem;
-  width: 15rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  justify-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 15rem;
+  width: 100%;
+  opacity: .65;
+  -webkit-transition: opacity .25s;
+  transition: opacity .25s;
+}
+
+.services:hover {
+  opacity: 1;
+}
+
+.services h2 {
+  color: white;
+  font-size: 2rem;
 }
 
 #service1 {
   background: url(../imgs/studyKids.jpg) no-repeat center;
+  background-size: cover;
 }
 
 #service2 {
   background: url(../imgs/courtKids.jpg) no-repeat center;
+  background-size: cover;
 }
 
 #service3 {
   background: url(../imgs/mentorKid.jpg) no-repeat center;
+  background-size: cover;
 }
 
 
@@ -157,4 +166,37 @@ header {
   background-color: black;
   color: white;
   padding: 2rem;
+}
+
+
+/* ANIMATION STYLING */
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.animate-pop-in {
+  -webkit-animation: pop-in .6s ease-out forwards;
+  animation: pop-in .6s ease-out forwards;
+  opacity: 0; /* Prevents flash when page loads */
 }
