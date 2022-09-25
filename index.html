@@ -8,14 +8,29 @@
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet">
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  window.OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "92ebf7e9-28aa-4152-9d20-97db3cb9a7b7",
-    });
-  });
-</script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "92ebf7e9-28aa-4152-9d20-97db3cb9a7b7",
+        });
+      });
+    </script>
+      <script>
+          let productName = "Program";
+          function addTagsUponCartUpdate(productName) {
+            OneSignal.push(function () {
+              let timestamp = Math.floor(Date.now() / 1000);
+              OneSignal.sendTags({
+                cart_update: timestamp,
+                product_name: productName,
+              }).then(function (tagsSent) {
+                // Callback called when tags have finished sending
+                console.log(tagsSent);
+              });
+            });
+          }
+      </script>
   </head>
   
   
@@ -26,13 +41,14 @@
         <a class="navItem" href="#CWU" title="Where We Are">WHERE WE ARE</a>
         <p id="logo">The SHAI Program</p>
         <a class="navItem" href="#CWU" title="Chat With Us">CHAT WITH US</a>
-        <a class="navItem" href="faqs.html" title="FAQs">FAQS</a>
+        <a class="navItem" href="#FAQ" title="FAQs">FAQS</a>
       </nav>
     </header>
     <main>
       <div class="splash">
         <p class="ctaMain animate-pop-in">YOUR CHILD. THEIR SUCCESS.</p>
         <p class="ctaSlogan animate-pop-in">IT ALL STARTS WITH US.</p>
+        <button onclick="addTagsUponCartUpdate(productName)">BUY PROGRAM</button>
       </div>
       <div class="subContent">
         <p id="wordCloud"><img src="resources/imgs/SHAIwordCloud.png" alt="Still having an impact."></p>
